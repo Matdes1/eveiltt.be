@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>L'équipe encadrante – Royal Eveil TT Auderghem</title>
+  <style>
+    body { margin: 0; font-family: 'Segoe UI', sans-serif; background-color: #f4f7fb; }
+
+    /* ===== EN-TÊTE ===== */
+    header {
+      background: linear-gradient(to right, #003366, #0055cc);
+      color: white;
+      text-align: center;
+      padding: 1.5rem 1rem;
+    }
+    header img {
+      height: 80px;
+      background-color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      margin-bottom: 10px;
+    }
+
+    /* ===== NAVBAR ===== */
+    nav { display:flex; justify-content:center; background:#002b80; flex-wrap:wrap; }
+    .dropdown { position:relative; }
+    .dropdown > a {
+      display:flex; align-items:center; gap:.6rem;
+      padding:1rem 1.25rem; color:#fff; text-decoration:none; font-weight:bold; font-size:1rem;
+      transition: background .3s;
+    }
+    .dropdown > a img { width:16px; height:16px; object-fit:contain; display:block; margin-top:2px; }
+    .dropdown > a:hover, .dropdown:hover > a { background:#0040bf; }
+
+    .dropdown-content { display:none; position:absolute; background:#0040bf; min-width:220px; z-index:1; flex-direction:column; }
+    .dropdown:hover .dropdown-content { display:flex; }
+
+    .dropdown-content a {
+      display:flex; align-items:center; gap:.5rem;
+      padding:.75rem 1rem; text-decoration:none; color:white; font-weight:normal; font-size:.95rem;
+    }
+    .dropdown-content a::before {
+      content:''; display:inline-block; width:10px; height:10px; background:white; border-radius:50%;
+    }
+    .dropdown-content a:hover { background:#0066ff; }
+
+    /* ===== CONTENU ===== */
+    main {
+      padding: 2rem; max-width: 800px; margin: auto;
+      background-color: #ffffff; border-radius: 12px;
+    }
+    h2 { font-size: 2rem; color: #003366; margin-top: 0; text-align: center; }
+    h3 { color:#003366; margin: 1.25rem 0 .75rem; }
+    .content { text-align: left; line-height: 1.7; font-size: 1rem; color: #333; }
+
+    .bullets { list-style-type: none; padding: 0; margin: 0; line-height: 1.9; }
+    .bullets li img { width:12px; vertical-align: middle; margin-right: .5rem; }
+
+    footer { background:#dcdcdc; text-align:center; padding:1rem; font-size:.9rem; color:#333; margin-top:2rem; }
+  </style>
+</head>
+<body>
+
+  <!-- EN-TÊTE -->
+  <header>
+    <a href="../index.html"><img src="../assets/logo.png" alt="Logo du club"/></a>
+  </header>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="dropdown">
+      <a href="#"><img src="../raquette.png" alt="Raquette"/> LE CLUB</a>
+      <div class="dropdown-content">
+        <a href="../club/presentation.html">Présentation</a>
+        <a href="../club/historique.html">Historique</a>
+        <a href="../club/equipe.html">L'équipe encadrante</a>
+        <a href="../club/valeurs.html">Valeurs du club</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a href="#"><img src="../raquette.png" alt="Raquette"/> INFOS PRATIQUES</a>
+      <div class="dropdown-content">
+        <a href="../infos/horaires.html">Horaires &amp; lieux</a>
+        <a href="../infos/cotisations.html">Cotisations</a>
+        <a href="../infos/inscriptions.html">Inscriptions</a>
+        <a href="../infos/materiel.html">Matériel conseillé</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a href="#"><img src="../raquette.png" alt="Raquette"/> ACTUS &amp; ÉVÉNEMENTS</a>
+      <div class="dropdown-content">
+        <a href="../actus/nouvelles.html">Dernières nouvelles</a>
+        <a href="../actus/tournois.html">Tournois internes</a>
+        <a href="../actus/evenements.html">Événements</a>
+        <a href="../actus/annonces.html">Annonces</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a href="#"><img src="../raquette.png" alt="Raquette"/> PHOTOS / VIDÉOS</a>
+      <div class="dropdown-content">
+        <a href="../galerie/entrainements.html">Entraînements</a>
+        <a href="../galerie/competitions.html">Compétitions</a>
+        <a href="../galerie/galerie_evenements.html">Événements du club</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a href="#"><img src="../raquette.png" alt="Raquette"/> CONTACT</a>
+      <div class="dropdown-content">
+        <a href="../contact/coordonnees.html">Coordonnées</a>
+        <a href="../contact/plan.html">Plan d'accès</a>
+        <a href="../contact/formulaire.html">Formulaire de contact</a>
+        <a href="../contact/reseaux.html">Réseaux sociaux</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CONTENU -->
+  <main style="margin: 3.5rem auto; max-width: 1000px; background-color: #fff; border-radius: 12px; padding: 2rem;">
+    <h2>L'équipe encadrante</h2>
+    <div class="content">
+      <h3>Comité du club</h3>
+      <ul class="bullets">
+        <li><img src="../balle_bleue.png" alt=""/> Président – Bart Vermeiren</li>
+        <li><img src="../balle_bleue.png" alt=""/> Vice-président – Michel Praet</li>
+        <li><img src="../balle_bleue.png" alt=""/> Secrétaire – Jacques Saint-Remi</li>
+        <li><img src="../balle_bleue.png" alt=""/> Trésorier – Laurent Cambron</li>
+        <li><img src="../balle_bleue.png" alt=""/> Responsable interclubs – Philippe Smets</li>
+        <li><img src="../balle_bleue.png" alt=""/> Membre - Jérémie Bolly</li>
+        <li><img src="../balle_bleue.png" alt=""/> Membre - Philippe Streel</li>
+        <li><img src="../balle_bleue.png" alt=""/> Membre - Mathieu Dessaint</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Royal Eveil TT Auderghem. Tous droits réservés.
+  </footer>
+</body>
+</html>

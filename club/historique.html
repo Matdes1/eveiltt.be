@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Historique – Royal Eveil TT Auderghem</title>
+  <style>
+    body{
+      margin:0;
+      font-family:'Segoe UI',sans-serif;
+      background:#f4f7fb;
+      color:#333;
+    }
+
+    /* En-tête */
+    header{ background:linear-gradient(to right,#003366,#0055cc); text-align:center; padding:1.5rem 1rem; }
+    header a{ display:inline-block; }
+    header img{ height:80px; background:#fff; padding:.5rem 1rem; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,.2); }
+
+    /* Navbar */
+    nav{ display:flex; justify-content:center; background:#002b80; flex-wrap:wrap; }
+    .dropdown{ position:relative; }
+    .dropdown>a{
+      display:flex; align-items:center; gap:.6rem;
+      padding:1rem 1.25rem; color:#fff; text-decoration:none; font-weight:bold; font-size:1rem;
+      transition:background .3s;
+    }
+    .dropdown>a img{ width:16px; height:16px; object-fit:contain; margin-top:2px; }
+    .dropdown:hover>a{ background:#0040bf; }
+    .dropdown-content{
+      display:none; position:absolute; background:#0040bf; min-width:220px; z-index:10; flex-direction:column;
+    }
+    .dropdown:hover .dropdown-content{ display:flex; }
+    .dropdown-content a{
+      display:flex; align-items:center; gap:.5rem; padding:.75rem 1rem;
+      text-decoration:none; color:#fff; font-weight:normal; font-size:.95rem;
+    }
+    /* Pastille blanche dans sous-menus, comme ailleurs */
+    .dropdown-content a::before{ content:''; width:10px; height:10px; background:#fff; border-radius:50%; display:inline-block; }
+    .dropdown-content a:hover{ background:#0066ff; }
+
+    /* Contenu principal */
+    main{
+      max-width:1000px;
+      margin:2rem auto;              /* marge haute = 2.0, comme demandé */
+      background:#fff;
+      border-radius:12px;
+      padding:2rem;
+      text-align:left;
+    }
+    h2{ text-align:center; color:#003366; font-size:2rem; margin:0 0 1rem; }
+    h3{ color:#003366; margin:1.25rem 0 .5rem; }
+
+    p, li{ font-size:1rem; line-height:1.6; }
+
+    /* Listes à balles bleues normalisées */
+    .goodies{ list-style:none; padding-left:0; margin:.25rem 0; }
+    .goodies li{ margin:.4rem 0; }
+    .goodies li img{
+      width:12px;                 /* ← taille fixée */
+      height:auto;
+      vertical-align:middle;
+      margin-right:.5rem;
+    }
+
+    footer{ background:#dcdcdc; text-align:center; padding:1rem; font-size:.9rem; color:#333; margin-top:2rem; }
+  </style>
+</head>
+<body>
+  <!-- EN-TÊTE -->
+  <header>
+    <a href="../index.html"><img src="../assets/logo.png" alt="Logo du club"></a>
+  </header>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="dropdown">
+      <a href="#"><img src="../raquette.png" alt=""> LE CLUB</a>
+      <div class="dropdown-content">
+        <a href="presentation.html">Présentation</a>
+        <a href="historique.html">Historique</a>
+        <a href="equipe.html">L'équipe encadrante</a>
+        <a href="valeurs.html">Valeurs du club</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a href="#"><img src="../raquette.png" alt=""> INFOS PRATIQUES</a>
+      <div class="dropdown-content">
+        <a href="../infos/horaires.html">Horaires &amp; lieux</a>
+        <a href="../infos/cotisations.html">Cotisations</a>
+        <a href="../infos/inscriptions.html">Inscriptions</a>
+        <a href="../infos/materiel.html">Matériel conseillé</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a href="#"><img src="../raquette.png" alt=""> ACTUS &amp; ÉVÉNEMENTS</a>
+      <div class="dropdown-content">
+        <a href="../actus/nouvelles.html">Dernières nouvelles</a>
+        <a href="../actus/tournois.html">Tournois internes</a>
+        <a href="../actus/evenements.html">Événements</a>
+        <a href="../actus/annonces.html">Annonces</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a href="#"><img src="../raquette.png" alt=""> PHOTOS / VIDÉOS</a>
+      <div class="dropdown-content">
+        <a href="../galerie/entrainements.html">Entraînements</a>
+        <a href="../galerie/competitions.html">Compétitions</a>
+        <a href="../galerie/galerie_evenements.html">Événements du club</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a href="#"><img src="../raquette.png" alt=""> CONTACT</a>
+      <div class="dropdown-content">
+        <a href="../contact/coordonnees.html">Coordonnées</a>
+        <a href="../contact/plan.html">Plan d'accès</a>
+        <a href="../contact/formulaire.html">Formulaire de contact</a>
+        <a href="../contact/reseaux.html">Réseaux sociaux</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CONTENU -->
+  <main>
+    <h2>Historique de l'Eveil TT Auderghem</h2>
+
+    <h3>1. CHRONOLOGIE :</h3>
+    <p>En 1964, quelques joueurs de tennis du Floréal&nbsp;TC, situé avenue Demey à Auderghem, pratiquaient le ping-pong, durant les mois d’hiver, sur la table située dans leur clubhouse. Petit à petit le nombre d’amateurs s’étant accru et les parties devenant plus intenses, ils décidèrent de franchir le pas et ils s’affilièrent à la Fédération Royale Ouvrière de Tennis de table du Brabant (FROTTB). C’est ainsi qu’est né l’Eveil tennis de table Auderghem en février 1964 sous l’impulsion de M.&nbsp;Guy&nbsp;Willem, premier Président et M.&nbsp;Gilbert&nbsp;David premier Secrétaire du club.</p>
+
+    <p>Fort d’une douzaine de joueurs, le club a continué à évoluer au sein du clubhouse du Floréal&nbsp;TC durant 3 ou 4 ans sur les 2 tables mises à leurs dispositions. L’évolution positive du nombre de joueurs (plus d’une vingtaine) a forcé les dirigeants à solliciter la commune d’Auderghem pour obtenir un local autonome, plus vaste permettant d’installer davantage de tables. C’est ainsi que le club de l’Eveil émigra pour la première fois dans la salle de gymnastique de l’école du Centre rue Williame à Auderghem. Trois soirs d’occupation par semaine et 6 tables : l’infrastructure était en place pour développer l’activité et s’ouvrir au plus grand nombre, enfants et adultes.</p>
+
+    <p>Le succès étant là, le partage du local avec d’autres activités sportives a constitué un handicap au développement de l’Eveil. Nous avons obtenu de la commune l’utilisation d’une salle de gymnastique à notre seul usage, en dehors des horaires scolaires, dans l’école de la Chasse Royale chaussée de Wavre. Quelques années de plein essor avec un local bien à nous, mais cependant pas spécifique au tennis de table. Plus de trente joueurs sont inscrits en compétition et participent à l’évolution de l’Eveil qui devient un club leader au sein de la FROTT&nbsp;Brabant. Des travaux de rénovation de l’école de la Chasse royale obligent les dirigeants à trouver, en accord avec l’échevinat des sports, une solution de rechange. C’est ainsi que nous retournons à l’école du Centre mais cette fois pour occuper 4 fois par semaine le préau couvert en partage avec un club de badminton. Salle vaste mais partagée, obligation de monter et démonter les 10 tables à chaque séance, lieu de passage pour les activités diverses de l’école qui prodiguait des cours du soir… les conditions s’avèrent très difficiles et notre développement stagne car nombre de joueurs regrettent l’autonomie précédemment acquise dans notre ancien local.</p>
+
+    <p>En 1980, la commune entame la construction d’un nouveau bâtiment destiné à la voirie communale dans la rue du Vieux-Moulin. Après de multiples tractations, nous parvenons à convaincre les autorités communales de laisser, à notre seul usage, le dernier étage du bâtiment. L’Eveil avait enfin un local exclusif et spécifique, ouvert 7 jours sur 7, permettant l’installation de 6 tables fixes, en autonomie de gestion totale, avec vestiaires et douches hommes et femmes et, suprême confort, un lieu de rencontres et d’échanges autour d’un bar géré par les membres.</p>
+
+    <p>L’obtention de ce local a vraiment permis de booster le club et de lui redonner une dynamique impressionnante. Nous sommes enfin « chez nous ».</p>
+
+    <p>Après quelques années, les besoins d’espace de la voirie communale ayant évolué, ce service a récupéré notre local. Nous avons, en 1983, une nouvelle fois émigré et avons été hébergé au Centre Sportif François Willegems dans lequel une salle, également spécifique et autonome avait été réservée pour l’Eveil&nbsp;TT.</p>
+
+    <p>Avec une infrastructure remarquable et dédiée uniquement au tennis de table, l’Eveil poursuit son expansion commencée dans la salle de la rue du Vieux-Moulin. Salle de 6 tables, espace pour les spectateurs, clubhouse isolé des aires de jeu, vestiaires et douches hommes et femmes, bureau administratif… tout est réuni pour poursuivre notre développement et récolter les fruits des efforts de tous les membres, joueurs comme dirigeants. Depuis l’utilisation de ce type de salle, nous comptons entre 50 et 80 affiliés par saison.</p>
+
+    <p>En 1990 nous quittons la Fédération Ouvrière pour s’inscrire à la Fédération Royale de Tennis de Table de Belgique (matricule 321) afin d’offrir à nos joueurs un niveau de compétition et une reconnaissance médiatique plus en rapport avec nos ambitions et nos valeurs sportives. Nous sommes toujours affiliés à la FRBTT et occupons toujours ce même local donc depuis plus de 20&nbsp;ans.</p>
+
+    <p>Nous espérons que le nomadisme de l’Eveil est terminé&nbsp;!</p>
+
+    <h3>2. ACTIVITÉS SPORTIVES</h3>
+    <p>En fonction des infrastructures mises à notre disposition, l’Eveil&nbsp;TT Auderghem a toujours été extrêmement actif sur le plan sportif. Outre notre participation aux championnats par équipes, tant en fédération ouvrière qu’en fédération royale, nous avons organisé maints championnats provinciaux ou nationaux. Notre présence aux coupes de Brabant comme aux coupes nationales ou sectorielles (jeunes, féminines, vétérans,…) fut constante durant ces 50 ans. Notre palmarès est, à ce point de vue, éloquent.</p>
+
+    <p>Chaque année un tournoi national est organisé par nos soins et récolte un succès jamais démenti puisqu’il est considéré comme un des plus grand tournoi de club organisé en Belgique. Il faut dire que la structure dont nous disposons actuellement, couplée avec celle plus vaste du Logis Auderghem, permet de réaliser des manifestations de grandes envergures qui mettent en évidence nos capacités à bien faire les choses et à élever le niveau organisationnel des compétitions pongistes. En février 2014 se déroulera le 48ième tournoi de l’Eveil ce qui signifie qu’à deux reprises seulement nous avons dû renoncer à son organisation.</p>
+
+    <p>Le principe défendu par les comités directeurs successifs du club est que tout membre doit pouvoir jouer à son niveau dans les meilleures conditions possibles. Ceci implique un nombre important d’équipes inscrites en championnat et en coupe ainsi qu’une plage horaire très vaste réservée aux entraînements pour les jeunes comme pour les adultes, que ces entraînements soient dirigés ou libres.</p>
+
+    <p>Enfin, pour donner une réponse valable à une demande et afin d’optimiser l’utilisation des locaux, une section « seniors » existe et pratique le tennis de table dans la journée. Elle compte plus d’une vingtaine de membres.</p>
+
+    <h3>3. ACTIVITÉS DIVERSES</h3>
+    <p>Si, dans la logique des choses, l’Eveil&nbsp;TT s’est toujours montré très actif dans la pratique du tennis de table tant en équipes qu’en individuel, nous avons aussi développé une série d’activités hors tennis de table afin d’intensifier nos relations amicales, élargir le cercle de nos sympathisants et cimenter la convivialité autour de thèmes très diversifiés. Nous retiendrons&nbsp;:</p>
+    <ul class="goodies">
+      <li><img src="../balle_bleue.png" alt="">Organisation de vacances aux sports d’hiver en Italie et en France (Malga San&nbsp;Giorgio, Sestrières et Les&nbsp;Gets)</li>
+      <li><img src="../balle_bleue.png" alt="">Organisation de plusieurs rallyes touristiques automobiles en Brabant wallon et Brabant flamand.</li>
+      <li><img src="../balle_bleue.png" alt="">Organisation de plusieurs « dropping » (sorte de course d’orientation nocturne) en Ardennes.</li>
+      <li><img src="../balle_bleue.png" alt="">Organisation des Réveillons de Nouvel An avec participation active des membres dans l’animation des soirées.</li>
+      <li><img src="../balle_bleue.png" alt="">Organisation de bals et diverses soirées festives à thème afin de se doter de moyens financiers suffisants pour développer notre activité sportive.</li>
+      <li><img src="../balle_bleue.png" alt="">Participation systématique – et dernier vainqueur – de l’Eveil Group Auderghem (EGA). Compétition multisports (football-basket-volley-athlétisme-tennis de table-badminton-kicker-patinage-balle-pelote) organisée par l’EGA dont le Président était également le Président du tennis de table.</li>
+      <li><img src="../balle_bleue.png" alt="">Création d’une compétition annuelle de golf (Eveil Golf Trophy) du fait de l’intérêt de plusieurs joueurs et anciens joueurs du club pour le golf.</li>
+      <li><img src="../balle_bleue.png" alt="">Création d’un site internet&nbsp;: www.eveiltt.be</li>
+    </ul>
+
+    <h3>4. ACTIVITÉS INTERNATIONALES</h3>
+    <p>Le dynamisme de l’Eveil&nbsp;TT ne s’est pas limité aux frontières de notre pays. Désireux de rencontrer d’autres pongistes, nous avons, dès le début, développé des contacts hors de nos frontières. La plupart du temps cela s’est traduit par des rencontres alternées et réciproques qui se sont prolongées pendant plusieurs années. Nous citerons&nbsp;:</p>
+    <ul class="goodies">
+      <li><img src="../balle_bleue.png" alt="">Présence du club aux Championnats du Monde de tennis de table à Birmingham (1977)</li>
+      <li><img src="../balle_bleue.png" alt="">Présence du club aux Championnats d’Europe de tennis de table à Paris (1988)</li>
+      <li><img src="../balle_bleue.png" alt="">Rencontre Göteborg / Eveil&nbsp;TT en Suède</li>
+      <li><img src="../balle_bleue.png" alt="">Rencontres multiples Eveil&nbsp;TT / Trêves (Allemagne)</li>
+      <li><img src="../balle_bleue.png" alt="">Rencontre Palma de Majorque / Eveil&nbsp;TT (Espagne)</li>
+      <li><img src="../balle_bleue.png" alt="">Rencontres multiples Eveil&nbsp;TT / Amiens (France)</li>
+      <li><img src="../balle_bleue.png" alt="">Rencontres multiples Eveil&nbsp;TT / Crédit Lyonnais Paris (France)</li>
+      <li><img src="../balle_bleue.png" alt="">Rencontres multiples Eveil&nbsp;TT / Carouge (Suisse)</li>
+      <li><img src="../balle_bleue.png" alt="">Rencontres multiples Eveil&nbsp;TT / Biarritz (France)</li>
+      <li><img src="../balle_bleue.png" alt="">Rencontres multiples Eveil&nbsp;TT / Bad&nbsp;Honnef (Allemagne)</li>
+    </ul>
+    <p>Dans le cadre du 50ième anniversaire du club, une rencontre internationale est programmée avec la participation espérée des clubs de Carouge (Suisse), Biarritz (France), Bad&nbsp;Honnef (Allemagne) et Eveil&nbsp;TT Auderghem.</p>
+
+    <h3>5. GALERIE DES PRÉSIDENTS</h3>
+    <ul class="goodies">
+      <li><img src="../balle_bleue.png" alt=""><strong>(†) Guy WILLEM</strong> — 1964 à 1969</li>
+      <li><img src="../balle_bleue.png" alt=""><strong>Daniel DUMONT</strong> — 1969 à 1991 <em>(Nommé Président d’Honneur après un mandat de 22 ans)</em></li>
+      <li><img src="../balle_bleue.png" alt=""><strong>Viviane GOFFIN</strong> — 1991 à 1997</li>
+      <li><img src="../balle_bleue.png" alt=""><strong>Jean-Marie HAEST</strong> — 1997 à 2001</li>
+      <li><img src="../balle_bleue.png" alt=""><strong>Ivo DEVIS</strong> — 2001 à 2009</li>
+      <li><img src="../balle_bleue.png" alt=""><strong>Bart VERMEIREN</strong> — 2009 à ….</li>
+    </ul>
+
+    <h3>6. PALMARÈS</h3>
+    <ul class="goodies">
+      <li><img src="../balle_bleue.png" alt=""><strong>FROTTB</strong> : de 1984 à 1990 en Nationale&nbsp;1 de cette Fédération. Meilleure performance : 5ième place sur 12.</li>
+      <li><img src="../balle_bleue.png" alt=""><strong>FRTTB</strong> : 5 années en Nationale&nbsp;3 et promotion en Nationale&nbsp;2 où le club s’est maintenu durant 6 ans.</li>
+      <li><img src="../balle_bleue.png" alt="">Championnat de Belgique Vétérans : 5 fois champions (Rozmarin – Dormael – Régnier – Van&nbsp;Horen)</li>
+      <li><img src="../balle_bleue.png" alt="">Championnat de Brabant Vétérans : 5 fois champions (même équipe)</li>
+    </ul>
+  </main>
+
+  <footer>
+    © 2025 Royal Eveil TT Auderghem. Tous droits réservés.
+  </footer>
+</body>
+</html>

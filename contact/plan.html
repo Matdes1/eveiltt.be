@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Plan d’accès – Royal Eveil TT Auderghem</title>
+  <style>
+    /* Base */
+    body{ margin:0; font-family:'Segoe UI',sans-serif; background:#f4f7fb; color:#333; }
+
+    /* En-tête */
+    header{ background:linear-gradient(to right,#003366,#0055cc); text-align:center; padding:1.5rem 1rem; }
+    header a{ display:inline-block; }
+    header img{ height:80px; background:#fff; padding:.5rem 1rem; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,.2); }
+
+    /* Navbar */
+    nav{ display:flex; justify-content:center; background:#002b80; flex-wrap:wrap; }
+    .dropdown{ position:relative; }
+    .dropdown > a{
+      display:flex; align-items:center; gap:.6rem;
+      padding:1rem 1.25rem; color:#fff; text-decoration:none; font-weight:bold; font-size:1rem;
+      transition:background .3s;
+    }
+    .dropdown > a img{ width:16px; height:16px; object-fit:contain; margin-top:2px; }
+    .dropdown:hover > a{ background:#0040bf; }
+    .dropdown-content{
+      display:none; position:absolute; background:#0040bf; min-width:220px; z-index:10; flex-direction:column;
+    }
+    .dropdown:hover .dropdown-content{ display:flex; }
+    .dropdown-content a{
+      display:flex; align-items:center; gap:.5rem; padding:.75rem 1rem;
+      text-decoration:none; color:#fff; font-size:.95rem; font-weight:normal;
+    }
+    .dropdown-content a::before{
+      content:''; width:10px; height:10px; background:#fff; border-radius:50%; display:inline-block;
+    }
+    .dropdown-content a:hover{ background:#0066ff; }
+
+    /* Contenu principal */
+    main{ max-width:1000px; margin:2rem auto; background:#fff; border-radius:12px; padding:2rem; }
+    h2{ text-align:center; color:#003366; font-size:2rem; margin-bottom:1.25rem; }
+
+    /* Grille de cartes */
+    .cards{ display:grid; grid-template-columns:1.25fr .75fr; gap:1.25rem; }
+    @media (max-width:960px){ .cards{ grid-template-columns:1fr; } }
+
+    .card{
+      border:1px solid #e9eef7; background:#fafdff; border-radius:12px; padding:1rem 1.25rem;
+    }
+    .card h3{ color:#003366; margin:.25rem 0 .75rem; }
+    .card h4{ color:#003366; margin:1rem 0 .35rem; }
+    .card p{ margin:.25rem 0; line-height:1.6; }
+
+    /* Carte OSM */
+    .map-wrap{ border-radius:12px; overflow:hidden; border:1px solid #e9eef7; }
+    .map{ width:100%; height:560px; border:0; }
+    .map-link{ display:inline-block; margin-top:.5rem; color:#003366; font-weight:700; text-decoration:none; }
+    .map-link:hover{ text-decoration:underline; }
+
+    /* Listes */
+    .list{ padding-left:1rem; margin:.25rem 0; }
+    .list li{ margin:.35rem 0; }
+
+    /* Pied de page */
+    footer{ background:#dcdcdc; text-align:center; padding:1rem; font-size:.9rem; color:#333; margin-top:2rem; }
+  </style>
+</head>
+<body>
+
+  <!-- EN-TÊTE -->
+  <header>
+    <a href="../index.html"><img src="../assets/logo.png" alt="Logo du club"/></a>
+  </header>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="dropdown">
+      <a href="#"><img src="../raquette.png" alt=""> LE CLUB</a>
+      <div class="dropdown-content">
+        <a href="../club/presentation.html">Présentation</a>
+        <a href="../club/historique.html">Historique</a>
+        <a href="../club/equipe.html">L'équipe encadrante</a>
+        <a href="../club/valeurs.html">Valeurs du club</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a href="#"><img src="../raquette.png" alt=""> INFOS PRATIQUES</a>
+      <div class="dropdown-content">
+        <a href="../infos/horaires.html">Horaires &amp; lieux</a>
+        <a href="../infos/cotisations.html">Cotisations</a>
+        <a href="../infos/inscriptions.html">Inscriptions</a>
+        <a href="../infos/materiel.html">Matériel conseillé</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a href="#"><img src="../raquette.png" alt=""> ACTUS &amp; ÉVÉNEMENTS</a>
+      <div class="dropdown-content">
+        <a href="../actus/nouvelles.html">Dernières nouvelles</a>
+        <a href="../actus/tournois.html">Tournois internes</a>
+        <a href="../actus/evenements.html">Événements</a>
+        <a href="../actus/annonces.html">Annonces</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a href="#"><img src="../raquette.png" alt=""> PHOTOS / VIDÉOS</a>
+      <div class="dropdown-content">
+        <a href="../galerie/entrainements.html">Entraînements</a>
+        <a href="../galerie/competitions.html">Compétitions</a>
+        <a href="../galerie/galerie_evenements.html">Événements du club</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a href="#"><img src="../raquette.png" alt=""> CONTACT</a>
+      <div class="dropdown-content">
+        <a href="../contact/coordonnees.html">Coordonnées</a>
+        <a href="../contact/plan.html">Plan d'accès</a>
+        <a href="../contact/formulaire.html">Formulaire de contact</a>
+        <a href="../contact/reseaux.html">Réseaux sociaux</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CONTENU -->
+  <main>
+    <h2>Plan d’accès</h2>
+
+    <div class="cards">
+      <!-- Colonne 1 : Carte + adresse -->
+      <section class="card">
+        <h3>Nous trouver</h3>
+
+        <!-- OpenStreetMap — Centre sportif communal (coordonnées exactes) -->
+        <div class="map-wrap">
+          <iframe
+            class="map"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=4.4249,50.8136,4.4349,50.8200&layer=mapnik&marker=50.81671,4.42996"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+        <a class="map-link"
+           href="https://www.openstreetmap.org/?mlat=50.81671&mlon=4.42996#map=18/50.81671/4.42996"
+           target="_blank" rel="noopener">
+          Ouvrir la carte dans OpenStreetMap
+        </a>
+
+        <p style="margin-top:.75rem;">
+          <strong>Centre Sportif d’Auderghem</strong><br>
+          Chaussée de Wavre 1690 — 1160 Auderghem
+        </p>
+      </section>
+
+      <!-- Colonne 2 : Infos pratiques (Parking + Transports) -->
+      <aside class="card">
+        <h3>Infos pratiques</h3>
+
+        <h4>Parkings à proximité</h4>
+        <ul class="list">
+          <li><strong>Parking du Centre sportif</strong> — Chaussée de Wavre 1690, 1160 Bruxelles. Gratuit (disque bleu en journée).
+            Depuis ce parking, montez au <strong>niveau 3</strong> (escalier/ascenseur), entrez dans le centre sportif à ce niveau, puis
+            redescendez au <strong>niveau 1</strong> pour accéder aux salles (Logis, Superdivision et Éveil).</li>
+          <li><strong>Parking du Centre culturel d’Auderghem</strong> — Rue Idiers 14, 1160 Bruxelles. Gratuit.</li>
+          <li><strong>Boulevard du Souverain</strong> — emplacements gratuits sur la berme centrale.</li>
+        </ul>
+
+        <h4>Transports en commun</h4>
+        <p style="margin:.25rem 0;"><strong>Métro / Tram</strong></p>
+        <ul class="list">
+          <li><strong>Métro 5</strong> — station <em>Hermann-Debroux</em> (± 8 min à pied).</li>
+          <li><strong>Tram 8</strong> — arrêt <em>Auderghem-Shopping</em> (± 5 min à pied).</li>
+        </ul>
+
+        <p style="margin:.25rem 0;"><strong>Bus</strong></p>
+        <ul class="list">
+          <li><strong>STIB 34</strong> — arrêt <em>Bergoje</em> (en face du club).</li>
+          <li><strong>STIB 41</strong> — arrêt <em>Hermann-Debroux</em>.</li>
+          <li><strong>STIB 72</strong> — arrêt <em>Hermann-Debroux Conforto</em>.</li>
+          <li><strong>STIB N09</strong> — arrêt <em>Auderghem-Shopping</em> (nuit ven→sam & sam→dim, 0–3 h).</li>
+          <li><strong>TEC E, 341, 343, 344, 345, 348, 349</strong> — arrêts <em>Hermann-Debroux</em> (liaisons vers périphérie est).</li>
+        </ul>
+        <p style="color:#5c5c5c; font-size:.95rem;">
+          (Vérifiez l’itinéraire en temps réel via STIB/TEC.)
+        </p>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Royal Eveil TT Auderghem. Tous droits réservés.
+  </footer>
+</body>
+</html>

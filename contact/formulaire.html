@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Formulaire de contact – Royal Eveil TT Auderghem</title>
+  <style>
+    body{ margin:0; font-family:'Segoe UI',sans-serif; background:#f4f7fb; color:#333; }
+
+    /* En-tête */
+    header{ background:linear-gradient(to right,#003366,#0055cc); text-align:center; padding:1.5rem 1rem; }
+    header a{ display:inline-block; }
+    header img{ height:80px; background:#fff; padding:.5rem 1rem; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,.2); }
+
+    /* Navbar */
+    nav{ display:flex; justify-content:center; background:#002b80; flex-wrap:wrap; }
+    .dropdown{ position:relative; }
+    .dropdown > a{ display:flex; align-items:center; gap:.6rem; padding:1rem 1.25rem; color:#fff; text-decoration:none; font-weight:bold; font-size:1rem; }
+    .dropdown > a img{ width:16px; height:16px; object-fit:contain; margin-top:2px; }
+    .dropdown:hover > a{ background:#0040bf; }
+    .dropdown-content{ display:none; position:absolute; background:#0040bf; min-width:220px; z-index:10; flex-direction:column; }
+    .dropdown:hover .dropdown-content{ display:flex; }
+    .dropdown-content a{ display:flex; align-items:center; gap:.5rem; padding:.75rem 1rem; text-decoration:none; color:#fff; font-size:.95rem; }
+    .dropdown-content a::before{ content:''; width:10px; height:10px; background:#fff; border-radius:50%; display:inline-block; }
+    .dropdown-content a:hover{ background:#0066ff; }
+
+    /* Contenu */
+    main{ max-width:1000px; margin:2rem auto; background:#fff; border-radius:12px; padding:2rem; }
+    h2{ text-align:center; color:#003366; font-size:2rem; margin-bottom:1.25rem; }
+
+    /* Formulaire */
+    form{ max-width:720px; margin:0 auto; }
+    .row{ display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+    @media (max-width:720px){ .row{ grid-template-columns:1fr; } }
+
+    label{ font-weight:600; color:#003366; display:block; margin:.5rem 0 .25rem; }
+    input, select, textarea{
+      width:100%; box-sizing:border-box; padding:.65rem .75rem;
+      border:1px solid #dbe5ff; border-radius:8px; background:#fafcff; font-size:1rem;
+    }
+    textarea{ min-height:140px; resize:vertical; }
+
+    .actions{ margin-top:1rem; display:flex; align-items:center; gap:1rem; flex-wrap:wrap; }
+    .btn{
+      appearance:none; border:1px solid #0040bf; background:#0040bf; color:#fff; border-radius:999px;
+      padding:.65rem 1.25rem; font-weight:700; cursor:pointer;
+      box-shadow:0 2px 6px rgba(0,0,0,.08);
+    }
+    .btn:hover{ background:#0055cc; border-color:#0055cc; }
+
+    .muted{ color:#666; font-size:.95rem; }
+
+    /* messages (cachés par défaut) */
+    .alert{ margin-top:1rem; border-radius:8px; padding:.75rem 1rem; display:none; }
+    .alert.ok{ border:1px solid #b8e6c7; background:#e9fbf0; color:#135d2f; }
+    .alert.err{ border:1px solid #ffd3cf; background:#fff0ef; color:#7f1d1d; }
+
+    footer{ background:#dcdcdc; text-align:center; padding:1rem; font-size:.9rem; color:#333; margin-top:2rem; }
+  </style>
+</head>
+<body>
+
+  <!-- EN-TÊTE -->
+  <header>
+    <a href="../index.html"><img src="../assets/logo.png" alt="Logo du club"/></a>
+  </header>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="dropdown">
+      <a href="#"><img src="../raquette.png" alt=""> LE CLUB</a>
+      <div class="dropdown-content">
+        <a href="../club/presentation.html">Présentation</a>
+        <a href="../club/historique.html">Historique</a>
+        <a href="../club/equipe.html">L'équipe encadrante</a>
+        <a href="../club/valeurs.html">Valeurs du club</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a href="#"><img src="../raquette.png" alt=""> INFOS PRATIQUES</a>
+      <div class="dropdown-content">
+        <a href="../infos/horaires.html">Horaires &amp; lieux</a>
+        <a href="../infos/cotisations.html">Cotisations</a>
+        <a href="../infos/inscriptions.html">Inscriptions</a>
+        <a href="../infos/materiel.html">Matériel conseillé</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a href="#"><img src="../raquette.png" alt=""> ACTUS &amp; ÉVÉNEMENTS</a>
+      <div class="dropdown-content">
+        <a href="../actus/nouvelles.html">Dernières nouvelles</a>
+        <a href="../actus/tournois.html">Tournois internes</a>
+        <a href="../actus/evenements.html">Événements</a>
+        <a href="../actus/annonces.html">Annonces</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a href="#"><img src="../raquette.png" alt=""> PHOTOS / VIDÉOS</a>
+      <div class="dropdown-content">
+        <a href="../galerie/entrainements.html">Entraînements</a>
+        <a href="../galerie/competitions.html">Compétitions</a>
+        <a href="../galerie/galerie_evenements.html">Événements du club</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a href="#"><img src="../raquette.png" alt=""> CONTACT</a>
+      <div class="dropdown-content">
+        <a href="../contact/coordonnees.html">Coordonnées</a>
+        <a href="../contact/plan.html">Plan d'accès</a>
+        <a href="../contact/formulaire.html">Formulaire de contact</a>
+        <a href="../contact/reseaux.html">Réseaux sociaux</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CONTENU -->
+  <main>
+    <h2>Formulaire de contact</h2>
+
+    <p>Une question, une envie d’essayer, une info à partager&nbsp;?  
+      Écris-nous via ce formulaire — on te répondra rapidement. Tu peux aussi passer dire bonjour un soir d’entraînement&nbsp;!</p>
+
+    <form id="contactForm" action="YOUR_FORMSPREE_ENDPOINT" method="POST" novalidate>
+      <!-- honeypot anti-spam -->
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off"/>
+
+      <div class="row">
+        <div>
+          <label for="name">Nom &amp; Prénom</label>
+          <input id="name" name="name" type="text" required placeholder="Votre nom complet"/>
+        </div>
+        <div>
+          <label for="email">Adresse e-mail</label>
+          <input id="email" name="_replyto" type="email" required placeholder="vous@exemple.com"/>
+        </div>
+      </div>
+
+      <div class="row">
+        <div>
+          <label for="subject">Sujet</label>
+          <select id="subject" name="subject" required>
+            <option value="" selected disabled>Choisissez…</option>
+            <option value="Découverte / Essai">Découverte / Essai</option>
+            <option value="Inscriptions">Inscriptions</option>
+            <option value="Horaires & lieux">Horaires & lieux</option>
+            <option value="Autre">Autre</option>
+          </select>
+        </div>
+        <div>
+          <label for="phone">Téléphone (optionnel)</label>
+          <input id="phone" name="phone" type="text" placeholder="+32…"/>
+        </div>
+      </div>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" required placeholder="Dites-nous en un peu plus…"></textarea>
+
+      <div class="actions">
+        <label class="muted">
+          <input type="checkbox" id="consent" required/>
+          J’accepte que mes informations soient utilisées pour me répondre.
+        </label>
+      </div>
+
+      <div class="actions">
+        <button class="btn" type="submit">Envoyer</button>
+      </div>
+
+      <div id="ok" class="alert ok" style="display:none;">Merci ! Votre message a bien été envoyé. Nous revenons vers vous très vite.</div>
+      <div id="err" class="alert err" style="display:none;">Oups, un souci est survenu. Veuillez réessayer plus tard.</div>
+    </form>
+  </main>
+
+  <footer>
+    © 2025 Royal Eveil TT Auderghem. Tous droits réservés.
+  </footer>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    const ok = document.getElementById('ok');
+    const err = document.getElementById('err');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      ok.style.display = 'none';
+      err.style.display = 'none';
+
+      const endpoint = form.getAttribute('action');
+      if (!endpoint || endpoint.includes('YOUR_FORMSPREE_ENDPOINT')) {
+        err.style.display = 'block';
+        err.textContent = "Le formulaire n'est pas encore configuré (endpoint manquant).";
+        return;
+      }
+
+      // Validation minimale
+      const name = form.querySelector('[name="name"]').value.trim();
+      const email = form.querySelector('[name="_replyto"]').value.trim();
+      const message = form.querySelector('[name="message"]').value.trim();
+      const consent = document.getElementById('consent').checked;
+      const honeypot = form.querySelector('[name="_gotcha"]').value;
+
+      if (honeypot) return; // bot
+
+      if (!name || !email || !message || !consent) {
+        err.style.display = 'block';
+        err.textContent = 'Merci de compléter les champs requis.';
+        return;
+      }
+
+      try {
+        const formData = new FormData(form);
+        const res = await fetch(endpoint, {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (res.ok) {
+          form.reset();
+          ok.style.display = 'block';
+        } else {
+          err.style.display = 'block';
+        }
+      } catch {
+        err.style.display = 'block';
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Horaires & lieux – Royal Eveil TT Auderghem</title>
+  <style>
+    /* ===== Base ===== */
+    body{ margin:0; font-family:'Segoe UI', sans-serif; background:#f4f7fb; color:#333; }
+
+    /* ===== En-tête ===== */
+    header{ background:linear-gradient(to right,#003366,#0055cc); text-align:center; padding:1.5rem 1rem; }
+    header a{ display:inline-block; }
+    header img{
+      height:80px; background:#fff; padding:.5rem 1rem; border-radius:12px;
+      box-shadow:0 4px 10px rgba(0,0,0,.2);
+    }
+
+    /* ===== Navbar ===== */
+    nav{ display:flex; justify-content:center; background:#002b80; flex-wrap:wrap; }
+    .dropdown{ position:relative; }
+    .dropdown > a{
+      display:flex; align-items:center; gap:.6rem;
+      padding:1rem 1.25rem; color:#fff; text-decoration:none; font-weight:bold; font-size:1rem;
+      transition:background .3s;
+    }
+    .dropdown > a img{ width:16px; height:16px; object-fit:contain; display:block; margin-top:2px; }
+    .dropdown:hover > a{ background:#0040bf; }
+
+    .dropdown-content{ display:none; position:absolute; background:#0040bf; min-width:220px; z-index:10; flex-direction:column; }
+    .dropdown:hover .dropdown-content{ display:flex; }
+    .dropdown-content a{
+      display:flex; align-items:center; gap:.5rem; padding:.75rem 1rem;
+      text-decoration:none; color:#fff; font-weight:normal; font-size:.95rem;
+    }
+    /* ⚪️ ronds blancs (pas d’image) */
+    .dropdown-content a::before{
+      content:''; width:10px; height:10px; display:inline-block; background:#fff; border-radius:50%;
+    }
+    .dropdown-content a:hover{ background:#0066ff; }
+
+    /* ===== Contenu ===== */
+    main{
+      max-width:1000px; margin:2rem auto; background:#fff; border-radius:12px;
+      padding:2rem;
+    }
+    h2{ text-align:center; color:#003366; font-size:2rem; margin:0 0 1.25rem; }
+    h3{ color:#003366; margin:1.5rem 0 .75rem; }
+
+    /* Bloc adresse + horaires */
+    .grid{
+      display:grid; grid-template-columns:1fr 1fr; gap:1.25rem;
+    }
+    @media (max-width:800px){ .grid{ grid-template-columns:1fr; } }
+
+    .card{
+      border:1px solid #e9eef7; background:#fafcff; border-radius:12px; padding:1rem 1.25rem;
+    }
+
+    .address{
+      line-height:1.7;
+    }
+
+    .hours{
+      display:grid; grid-template-columns:140px 1fr; row-gap:.5rem; column-gap:1rem;
+      align-items:center;
+    }
+    .hours .day{ font-weight:700; color:#003366; }
+    .hours .time{ }
+
+    /* Encart Seniors (contraste) */
+    .seniors{
+      margin-top:1.5rem; border:2px solid #0055cc; background:#eaf2ff;
+      border-radius:12px; padding:1rem 1.25rem;
+    }
+    .seniors h4{ margin:.2rem 0 .5rem; color:#003366; }
+    .seniors p{ margin:.25rem 0; }
+
+    footer{ background:#dcdcdc; text-align:center; padding:1rem; font-size:.9rem; color:#333; margin-top:2rem; }
+  </style>
+</head>
+<body>
+
+  <!-- EN-TÊTE -->
+  <header>
+    <a href="../index.html"><img src="../assets/logo.png" alt="Logo du club"/></a>
+  </header>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="dropdown">
+      <a href="#"><img src="../raquette.png" alt=""> LE CLUB</a>
+      <div class="dropdown-content">
+        <a href="../club/presentation.html">Présentation</a>
+        <a href="../club/historique.html">Historique</a>
+        <a href="../club/equipe.html">L'équipe encadrante</a>
+        <a href="../club/valeurs.html">Valeurs du club</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a href="#"><img src="../raquette.png" alt=""> INFOS PRATIQUES</a>
+      <div class="dropdown-content">
+        <a href="../infos/horaires.html">Horaires &amp; lieux</a>
+        <a href="../infos/cotisations.html">Cotisations</a>
+        <a href="../infos/inscriptions.html">Inscriptions</a>
+        <a href="../infos/materiel.html">Matériel conseillé</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a href="#"><img src="../raquette.png" alt=""> ACTUS &amp; ÉVÉNEMENTS</a>
+      <div class="dropdown-content">
+        <a href="../actus/nouvelles.html">Dernières nouvelles</a>
+        <a href="../actus/tournois.html">Tournois internes</a>
+        <a href="../actus/evenements.html">Événements</a>
+        <a href="../actus/annonces.html">Annonces</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a href="#"><img src="../raquette.png" alt=""> PHOTOS / VIDÉOS</a>
+      <div class="dropdown-content">
+        <a href="../galerie/entrainements.html">Entraînements</a>
+        <a href="../galerie/competitions.html">Compétitions</a>
+        <a href="../galerie/galerie_evenements.html">Événements du club</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a href="#"><img src="../raquette.png" alt=""> CONTACT</a>
+      <div class="dropdown-content">
+        <a href="../contact/coordonnees.html">Coordonnées</a>
+        <a href="../contact/plan.html">Plan d'accès</a>
+        <a href="../contact/formulaire.html">Formulaire de contact</a>
+        <a href="../contact/reseaux.html">Réseaux sociaux</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CONTENU -->
+  <main>
+    <h2>Horaires &amp; lieux</h2>
+
+    <div class="grid">
+      <!-- Adresse -->
+      <section class="card">
+        <h3>Adresse</h3>
+        <p class="address">
+          <strong>Centre Sportif d’Auderghem</strong><br/>
+          Chaussée de Wavre 1690<br/>
+          1160 Auderghem
+        </p>
+      </section>
+
+      <!-- Horaires -->
+      <section class="card">
+        <h3>Horaires d’ouverture</h3>
+        <div class="hours">
+          <div class="day">Mardi</div>
+          <div class="time">Ouvert à partir de <strong>18&nbsp;h&nbsp;30</strong></div>
+
+          <div class="day">Jeudi</div>
+          <div class="time">Ouvert à partir de <strong>19&nbsp;h&nbsp;00</strong></div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Encart Seniors (contraste discret) -->
+    <section class="seniors" aria-label="Seniors ping-pong club">
+      <h4>Seniors – Ping-pong club de l’Eveil (60+)</h4>
+      <p><strong>Lundi &amp; Jeudi</strong> de <strong>13&nbsp;h&nbsp;30</strong> à <strong>16&nbsp;h&nbsp;00</strong></p>
+      <p>Accueil convivial et jeu loisir pour toutes et tous.</p>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Royal Eveil TT Auderghem. Tous droits réservés.
+  </footer>
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nouvelles – Royal Eveil TT Auderghem</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f7fb;
+    }
+
+    /* ===== EN-TÊTE (identique index) ===== */
+    header {
+      background: linear-gradient(to right, #003366, #0055cc);
+      color: white;
+      text-align: center;
+      padding: 1.5rem 1rem;
+    }
+    header img {
+      height: 80px;
+      background-color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      margin-bottom: 10px;
+    }
+
+    /* ===== NAVBAR (identique index) ===== */
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #002b80;
+      flex-wrap: wrap;
+    }
+    .dropdown { position: relative; }
+    .dropdown > a {
+      display: flex;
+      align-items: center;
+      padding: 1rem 1.25rem;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      gap: 0.6rem;
+      transition: background 0.3s;
+    }
+    .dropdown > a img {
+      width: 16px; height: 16px; object-fit: contain; display: block; margin-top: 2px;
+    }
+    .dropdown > a:hover,
+    .dropdown:hover > a { background-color: #0040bf; }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #0040bf;
+      min-width: 220px;
+      z-index: 1;
+      flex-direction: column;
+    }
+    .dropdown:hover .dropdown-content { display: flex; }
+
+    .dropdown-content a {
+      display: flex; align-items: center; gap: 0.5rem;
+      padding: 0.75rem 1rem; text-decoration: none; color: white;
+      font-weight: normal; font-size: 0.95rem;
+    }
+    /* ⚪️ ROND BLANC COMME SUR index.html (pas d’image) */
+    .dropdown-content a::before {
+      content: '';
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background-color: white;
+      border-radius: 50%;
+    }
+    .dropdown-content a:hover { background-color: #0066ff; }
+
+    /* ===== CONTENU ===== */
+    main {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: 2rem auto;
+      background-color: #ffffff;
+      border-radius: 12px;
+    }
+    h2 { font-size: 2rem; color: #003366; text-align: center; margin-top: 0; }
+    h3 { color: #003366; margin: 1.75rem 0 .75rem; }
+
+    /* Encart “en-tête” pour les équipes */
+    .teams-callout {
+      border: 1px solid #cfe0ff;
+      background: #eef3ff;
+      border-radius: 12px;
+      padding: 1.25rem;
+      margin: 0 0 1.5rem 0;
+    }
+    .teams-legend {
+      font-weight: 700; color: #003366; text-align: center; margin: 0 0 .8rem;
+    }
+    .teams-row {
+      display: flex; flex-wrap: wrap; gap: .75rem; justify-content: center;
+    }
+    .pill-btn {
+      display: inline-block;
+      text-decoration: none;
+      color: #0040bf;
+      font-weight: 600;
+      background: #fff;
+      border: 1px solid #dbe5ff;
+      border-radius: 999px;
+      padding: .55rem 1.1rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,.08);
+      transition: transform .05s ease, box-shadow .2s ease, background .2s ease, color .2s ease;
+    }
+    .pill-btn:hover { background:#0040bf; color:#fff; box-shadow:0 4px 10px rgba(0,0,0,.12); }
+    .pill-btn:active { transform: translateY(1px); }
+
+    /* Zone actus simple (trame globale) */
+    .news article { border-top: 1px solid #eef1f7; padding-top: 1rem; margin-top: 1rem; }
+    .news small { color:#666; }
+    .bullets { list-style: none; padding-left: 0; }
+    .bullets li { margin:.35rem 0; }
+  </style>
+</head>
+<body>
+  <!-- Logo cliquable (chemin relatif depuis actus/) -->
+  <header>
+    <a href="../index.html"><img src="../assets/logo.png" alt="Logo du club"/></a>
+  </header>
+
+  <nav>
+    <div class="dropdown">
+      <a href="#"><img src="../raquette.png" alt="Raquette"> LE CLUB</a>
+      <div class="dropdown-content">
+        <a href="../club/presentation.html">Présentation</a>
+        <a href="../club/historique.html">Historique</a>
+        <a href="../club/equipe.html">L'équipe encadrante</a>
+        <a href="../club/valeurs.html">Valeurs du club</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a href="#"><img src="../raquette.png" alt="Raquette"> INFOS PRATIQUES</a>
+      <div class="dropdown-content">
+        <a href="../infos/horaires.html">Horaires &amp; lieux</a>
+        <a href="../infos/cotisations.html">Cotisations</a>
+        <a href="../infos/inscriptions.html">Inscriptions</a>
+        <a href="../infos/materiel.html">Matériel conseillé</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a href="#"><img src="../raquette.png" alt="Raquette"> ACTUS &amp; ÉVÉNEMENTS</a>
+      <div class="dropdown-content">
+        <a href="../actus/nouvelles.html">Dernières nouvelles</a>
+        <a href="../actus/tournois.html">Tournois internes</a>
+        <a href="../actus/evenements.html">Événements</a>
+        <a href="../actus/annonces.html">Annonces</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a href="#"><img src="../raquette.png" alt="Raquette"> PHOTOS / VIDÉOS</a>
+      <div class="dropdown-content">
+        <a href="../galerie/entrainements.html">Entraînements</a>
+        <a href="../galerie/competitions.html">Compétitions</a>
+        <a href="../galerie/galerie_evenements.html">Événements du club</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a href="#"><img src="../raquette.png" alt="Raquette"> CONTACT</a>
+      <div class="dropdown-content">
+        <a href="../contact/coordonnees.html">Coordonnées</a>
+        <a href="../contact/plan.html">Plan d'accès</a>
+        <a href="../contact/formulaire.html">Formulaire de contact</a>
+        <a href="../contact/reseaux.html">Réseaux sociaux</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <h2>Journal du club</h2>
+
+    <!-- EN-TÊTE ÉQUIPES MIS EN AVANT -->
+    <section class="teams-callout" aria-label="Résultats & Classements AFTT">
+      <div class="teams-legend">Résultats &amp; Classements (AFTT)</div>
+
+      <div class="teams-legend" style="font-weight:600; opacity:.9; margin-top:.25rem;">Messieurs</div>
+      <div class="teams-row">
+        <a class="pill-btn" target="_blank" rel="noopener" href="https://resultats.aftt.be/index.php?menu=5&modif=0&club_id=901&div_id=8858_A">Équipe Messieurs A</a>
+        <a class="pill-btn" target="_blank" rel="noopener" href="https://resultats.aftt.be/index.php?menu=5&modif=0&club_id=901&div_id=8860_B">Équipe Messieurs B</a>
+        <a class="pill-btn" target="_blank" rel="noopener" href="https://resultats.aftt.be/index.php?menu=5&modif=0&club_id=901&div_id=8868_C">Équipe Messieurs C</a>
+        <a class="pill-btn" target="_blank" rel="noopener" href="https://resultats.aftt.be/index.php?menu=5&modif=0&club_id=901&div_id=8864_D">Équipe Messieurs D</a>
+        <a class="pill-btn" target="_blank" rel="noopener" href="https://resultats.aftt.be/index.php?menu=5&modif=0&club_id=901&div_id=8866_E">Équipe Messieurs E</a>
+        <a class="pill-btn" target="_blank" rel="noopener" href="https://resultats.aftt.be/index.php?menu=5&modif=0&club_id=901&div_id=8876_F">Équipe Messieurs F</a>
+      </div>
+
+      <div class="teams-legend" style="font-weight:600; opacity:.9; margin-top:1rem;">Vétérans</div>
+      <div class="teams-row">
+        <a class="pill-btn" target="_blank" rel="noopener" href="https://resultats.aftt.be/index.php?menu=5&modif=0&club_id=901&div_id=8717_A">Vétérans A</a>
+        <a class="pill-btn" target="_blank" rel="noopener" href="https://resultats.aftt.be/index.php?menu=5&modif=0&club_id=901&div_id=8719_B">Vétérans B</a>
+        <a class="pill-btn" target="_blank" rel="noopener" href="https://resultats.aftt.be/index.php?menu=5&modif=0&club_id=901&div_id=8722_C">Vétérans C</a>
+        <a class="pill-btn" target="_blank" rel="noopener" href="https://resultats.aftt.be/index.php?menu=5&modif=0&club_id=901&div_id=8724_D">Vétérans D</a>
+      </div>
+    </section>
+
+    <!-- ACTUS (trame globale du site) -->
+    <section class="news" aria-label="Actualités du club">
+      <h3>Actualités du club</h3>
+
+      <!-- Exemple prêt à dupliquer -->
+      <article>
+        <h4 style="margin:.25rem 0; color:#003366;">Titre de votre actu</h4>
+        <small>12/09/2025</small>
+        <p style="margin:.5rem 0 0;">
+          C'est parti pour cette nouvelle saison 2025-2026 :
+        </p>
+        <ul class="bullets">
+          <li>L'équipe A ...</li>
+          <li>L'équipe B ...</li>
+		  <li>L'équipe C ...</li>
+		  <li>L'équipe D ...</li>
+		  <li>L'équipe E ...</li>
+		  <li>L'équipe F ...</li>
+        </ul>
+      </article>
+      <!-- Dupliquez <article> pour chaque nouvelle -->
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Royal Eveil TT Auderghem. Tous droits réservés.
+  </footer>
+</body>
+</html>
