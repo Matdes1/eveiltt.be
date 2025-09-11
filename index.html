@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Royal Eveil TT Auderghem</title>
+<style>
+  /* Base */
+  body{margin:0;font-family:'Segoe UI',sans-serif;background:#f4f7fb;color:#333}
+
+  /* En-tête */
+  header{background:linear-gradient(to right,#003366,#0055cc);text-align:center;padding:1.5rem 1rem}
+  header a{display:inline-block}
+  header img{height:80px;background:#fff;padding:.5rem 1rem;border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,.2);margin-bottom:10px}
+
+  /* Navbar */
+  nav{display:flex;justify-content:center;background:#002b80;flex-wrap:wrap}
+  .dropdown{position:relative}
+  .dropdown>a{display:flex;align-items:center;gap:.6rem;padding:1rem 1.25rem;color:#fff;text-decoration:none;font-weight:700;font-size:1rem;transition:background .3s}
+  .dropdown>a img{width:16px;height:16px;object-fit:contain;margin-top:2px}
+  .dropdown:hover>a{background:#0040bf}
+  .dropdown-content{display:none;position:absolute;background:#0040bf;min-width:220px;z-index:10;flex-direction:column}
+  .dropdown:hover .dropdown-content{display:flex}
+  .dropdown-content a{display:flex;align-items:center;gap:.5rem;padding:.75rem 1rem;text-decoration:none;color:#fff;font-size:.95rem;font-weight:normal}
+  .dropdown-content a::before{content:'';width:10px;height:10px;background:#fff;border-radius:50%}
+  .dropdown-content a:hover{background:#0066ff}
+
+  /* Carte principale (cohérente avec les autres pages) */
+  .main-card{max-width:1000px;margin:2rem auto;background:#fff;border-radius:12px;padding:2rem;text-align:center}
+  .main-card h2{font-size:2rem;color:#003366;margin:0 0 .75rem}
+  .main-card p.lead{font-size:1.1rem;line-height:1.6}
+
+  /* Liste à balles bleues */
+  .goodies{list-style:none;padding:0;font-size:1rem;line-height:2;text-align:left;display:inline-block;margin:0}
+  .goodies img{width:12px;vertical-align:middle;margin-right:.5rem}
+
+  /* Boutons principaux (style “3D” blanc) */
+  .main-btns{display:flex;justify-content:center;gap:1rem;margin-top:2rem;flex-wrap:wrap}
+  .btn-pill{
+    display:inline-flex;align-items:center;gap:.5rem;
+    padding:1rem 1.5rem;border-radius:999px;
+    background:#fff;border:2px solid #1a73e8;color:#1a73e8;
+    text-decoration:none;font-weight:700;
+    box-shadow:0 6px 14px rgba(26,115,232,.15), inset 0 -2px 0 rgba(26,115,232,.08);
+    transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
+  }
+  .btn-pill img{width:14px;height:14px;object-fit:contain}
+  .btn-pill:hover{transform:translateY(-1px);box-shadow:0 10px 20px rgba(26,115,232,.22), inset 0 -2px 0 rgba(26,115,232,.12)}
+  .btn-pill:active{transform:translateY(0);box-shadow:0 6px 14px rgba(26,115,232,.15), inset 0 2px 0 rgba(26,115,232,.12)}
+  
+  footer{background:#dcdcdc;text-align:center;padding:1rem;font-size:.9rem;color:#333}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html"><img src="assets/logo.png" alt="Logo du club"></a>
+</header>
+
+<nav>
+  <div class="dropdown">
+    <a href="#"><img src="raquette.png" alt="Raquette"> LE CLUB</a>
+    <div class="dropdown-content">
+      <a href="club/presentation.html">Présentation</a>
+      <a href="club/historique.html">Historique</a>
+      <a href="club/equipe.html">L'équipe encadrante</a>
+      <a href="club/valeurs.html">Valeurs du club</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <a href="#"><img src="raquette.png" alt="Raquette"> INFOS PRATIQUES</a>
+    <div class="dropdown-content">
+      <a href="infos/horaires.html">Horaires & lieux</a>
+      <a href="infos/cotisations.html">Cotisations</a>
+      <a href="infos/inscriptions.html">Inscriptions</a>
+      <a href="infos/materiel.html">Matériel conseillé</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <a href="#"><img src="raquette.png" alt="Raquette"> ACTUS & ÉVÉNEMENTS</a>
+    <div class="dropdown-content">
+      <a href="actus/nouvelles.html">Dernières nouvelles</a>
+      <a href="actus/tournois.html">Tournois internes</a>
+      <a href="actus/evenements.html">Événements</a>
+      <a href="actus/annonces.html">Annonces</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <a href="#"><img src="raquette.png" alt="Raquette"> PHOTOS / VIDÉOS</a>
+    <div class="dropdown-content">
+      <a href="galerie/entrainements.html">Entraînements</a>
+      <a href="galerie/competitions.html">Compétitions</a>
+      <a href="galerie/galerie_evenements.html">Événements du club</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <a href="#"><img src="raquette.png" alt="Raquette"> CONTACT</a>
+    <div class="dropdown-content">
+      <a href="contact/coordonnees.html">Coordonnées</a>
+      <a href="contact/plan.html">Plan d'accès</a>
+      <a href="contact/formulaire.html">Formulaire de contact</a>
+      <a href="contact/reseaux.html">Réseaux sociaux</a>
+    </div>
+  </div>
+</nav>
+
+<main class="main-card">
+  <h2>Bienvenue au Royal Eveil TT Auderghem !</h2>
+  <p class="lead">
+    Depuis 1964, notre club vous accueille dans une ambiance chaleureuse et dynamique au cœur d’Auderghem.<br>
+    Que vous soyez débutant, joueur loisir ou compétiteur aguerri, vous trouverez votre place à nos côtés !
+  </p>
+
+  <div style="margin:2rem 0;">
+    <h3 style="color:#003366;margin:0 0 .75rem;">Ce que vous trouverez chez nous :</h3>
+    <ul class="goodies">
+      <li><img src="balle_bleue.png" alt="">Des entraînements libres et dirigés</li>
+      <li><img src="balle_bleue.png" alt="">Une équipe passionnée et bienveillante</li>
+      <li><img src="balle_bleue.png" alt="">Une ambiance conviviale</li>
+      <li><img src="balle_bleue.png" alt="">Des moments de partage sportif et plus si affinités</li>
+    </ul>
+  </div>
+
+  <p class="lead">Envie de venir taper la balle ? <strong>Venez essayer !</strong></p>
+
+  <div class="main-btns">
+    <a class="btn-pill" href="infos/horaires.html">
+      <img src="balle_bleue.png" alt="">Horaires & lieux
+    </a>
+    <a class="btn-pill" href="infos/inscriptions.html">
+      <img src="balle_bleue.png" alt="">Inscriptions
+    </a>
+    <a class="btn-pill" href="contact/coordonnees.html">
+      <img src="balle_bleue.png" alt="">Seniors Eveil
+    </a>
+  </div>
+</main>
+
+<footer>© 2025 Royal Eveil TT Auderghem. Tous droits réservés.</footer>
+</body>
+</html>
