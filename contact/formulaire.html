@@ -136,57 +136,58 @@
     <p class="lead">Une question, une première visite, une inscription ? Écrivez-nous, on vous répond au plus vite.</p>
 
     <!-- 🔗 Formsubmit → enverra à eveiltt@outlook.be (à valider 1x) -->
-    <form id="contactForm" action="https://formsubmit.co/eveiltt@outlook.be" method="POST" novalidate>
-      <!-- Anti-spam & options Formsubmit -->
-      <input type="text" name="_honey" style="display:none">
-      <input type="hidden" name="_captcha" value="false">
-      <!-- Optionnel : page de remerciement si tu en crées une -->
-      <!-- <input type="hidden" name="_next" value="https://matdes1.github.io/eveiltt.be/contact/merci.html"> -->
-      <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_subject" value="Message depuis le site Eveil TT">
+<form id="contactForm" action="https://formsubmit.co/eveiltt@outlook.be" method="POST" novalidate>
+  <!-- Anti-spam & options Formsubmit -->
+  <input type="text" name="_honey" style="display:none">          <!-- honeypot -->
+  <input type="hidden" name="_captcha" value="false">             <!-- pas de captcha -->
+  <!-- (optionnel) redirection après envoi -->
+  <!-- <input type="hidden" name="_next" value="https://ton-domaine/contact/merci.html"> -->
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_subject" value="Message depuis le site Eveil TT">
 
-      <div class="row">
-        <div>
-          <label for="name">Nom &amp; Prénom</label>
-          <input id="name" name="name" type="text" required placeholder="Votre nom complet">
-        </div>
-        <div>
-          <label for="email">Adresse e-mail</label>
-          <input id="email" name="email" type="email" required placeholder="vous@exemple.com">
-        </div>
-      </div>
+  <div class="row">
+    <div>
+      <label for="name">Nom & Prénom</label>
+      <input id="name" name="name" type="text" required placeholder="Votre nom complet">
+    </div>
+    <div>
+      <label for="email">Adresse e-mail</label>
+      <input id="email" name="email" type="email" required placeholder="vous@exemple.com">
+    </div>
+  </div>
 
-      <div class="row">
-        <div>
-          <label for="subject">Sujet</label>
-          <select id="subject" name="subject" required>
-            <option value="" selected disabled>Choisissez…</option>
-            <option value="Découverte / Essai">Découverte / Essai</option>
-            <option value="Inscriptions">Inscriptions</option>
-            <option value="Horaires & lieux">Horaires & lieux</option>
-            <option value="Autre">Autre</option>
-          </select>
-        </div>
-        <div>
-          <label for="phone">Téléphone (optionnel)</label>
-          <input id="phone" name="phone" type="text" placeholder="+32…">
-        </div>
-      </div>
+  <div class="row">
+    <div>
+      <label for="subject">Sujet</label>
+      <select id="subject" name="subject" required>
+        <option value="" selected disabled>Choisissez…</option>
+        <option value="Découverte / Essai">Découverte / Essai</option>
+        <option value="Inscriptions">Inscriptions</option>
+        <option value="Horaires & lieux">Horaires & lieux</option>
+        <option value="Autre">Autre</option>
+      </select>
+    </div>
+    <div>
+      <label for="phone">Téléphone (optionnel)</label>
+      <input id="phone" name="phone" type="text" placeholder="+32…">
+    </div>
+  </div>
 
-      <label for="message">Message</label>
-      <textarea id="message" name="message" required placeholder="Dites-nous en un peu plus…"></textarea>
+  <label for="message">Message</label>
+  <textarea id="message" name="message" required placeholder="Dites-nous en un peu plus…"></textarea>
 
-      <div class="actions">
-        <label class="muted">
-          <input type="checkbox" id="consent" required>
-          J’accepte que mes informations soient utilisées pour me répondre.
-        </label>
-      </div>
+  <div class="actions">
+    <label class="muted">
+      <input type="checkbox" id="consent" name="consent" value="oui" required>
+      J’accepte que mes informations soient utilisées pour me répondre.
+    </label>
+  </div>
 
-      <div class="actions" style="margin-top:1.25rem;">
-        <button class="btn" type="submit">Envoyer</button>
-      </div>
-    </form>
+  <div class="actions" style="margin-top:1.25rem;">
+    <button class="btn" type="submit">Envoyer</button>
+  </div>
+</form>
+
   </main>
 
   <footer>
